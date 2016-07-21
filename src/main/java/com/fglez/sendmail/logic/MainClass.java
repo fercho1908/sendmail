@@ -11,7 +11,7 @@ import com.fglez.sendmail.utils.SendMailUtil;
  * Date: 7/18/16.
  * Time: 4:59 PM.
  */
-public class Principal {
+public class MainClass {
 
     public static void main(String[] args) {
         CLIConfig cliConfig = new CLIConfig();
