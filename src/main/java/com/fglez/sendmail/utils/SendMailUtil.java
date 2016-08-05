@@ -71,6 +71,7 @@ public class SendMailUtil {
         connectionProp = this.readProperty();
         user = connectionProp.getProperty("user");
         password = connectionProp.getProperty("password");
+        config.setUser(user);
         return Connect(user, password, connectionProp);
     }
 

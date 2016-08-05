@@ -14,6 +14,7 @@ import com.fglez.sendmail.utils.SendMailUtil;
 public class MainClass {
 
     public static void main(String[] args) {
+        System.setProperty("javax.net.ssl.trustStore","/usr/java/jdk1.7.0_79/jre/lib/security/cacerts");
         CLIConfig cliConfig = new CLIConfig();
         try {
             Config config = cliConfig.getConfig(args);
@@ -25,6 +26,7 @@ public class MainClass {
 
             sendMailUtil.sendMail();
         } catch (LogicException e) {
+            e.printStackTrace();
             System.err.print(e.getMessage());
         }
     }
